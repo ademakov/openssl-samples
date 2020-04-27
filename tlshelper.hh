@@ -44,6 +44,9 @@ using SSL_Ptr = std::unique_ptr<SSL, SSL_Deleter>;
 using BIO_Ptr = std::unique_ptr<BIO, BIO_Deleter>;
 using BIO_METHOD_Ptr = std::unique_ptr<BIO_METHOD, BIO_METHOD_Deleter>;
 
+void
+tls_error(const std::string& message);
+
 [[noreturn]] void
 tls_fatal(const std::string& message);
 
